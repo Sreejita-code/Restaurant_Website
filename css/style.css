@@ -1,0 +1,284 @@
+/* CSS RESET */
+*{
+    margin:0px;
+    padding:0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root{
+    --navbar-height:59px;
+}
+body{
+    background-color:rgb(243, 244, 239);
+}
+/* Navigation Bar */
+
+#navbar{
+    position:sticky;
+    top:0px;
+    display:flex;
+    align-items: center;
+}
+
+/*Navigation Bar: Logo and Image */
+#logo{
+    margin:10px 34px;
+}
+#logo img{
+    height:94px;
+    margin:-14px -7px;
+}
+
+/* Navigation Bar:List Styling */
+#navbar ul{
+    display:flex;
+    font-family:cursive;
+}
+#navbar::before{
+    content:"";
+    background-color: black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:90px;
+    width:100%;
+    z-index: -1;
+    opacity:0.8;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1rem;
+}
+#navbar ul li a{
+    display:block;
+    padding:3px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    color:white;
+}
+#navbar ul li a:hover{
+    background-color: white;
+    color:black;;
+}
+
+/* Home Section */
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    align-items: center;
+    justify-content: center;
+    height:370px;
+}
+
+#home::before{
+    background: url('../images/restaurant-g7755a1de9_1280.jpg') no-repeat center center/cover;
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:80%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.89;
+ 
+}
+#home h1{
+    color:rgb(244, 162, 31);
+    font-size: 90px;
+    text-align:center;
+    font-family: 'Bree Serif', serif;
+    text-decoration:underline;
+}
+#home p{
+    color:wheat;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 2px 3px 4px black;
+}
+#home a{
+    text-decoration: none;
+    color:white;
+}
+.word{
+    width:90%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    top:20%;
+    left:50%;
+    text-align: center;
+}
+.word span{
+    display:inline-block;
+    font-family:'Times New Roman', Times, serif;
+    font-size:4vw;
+    font-weight: 700;
+    color:rgb(244, 162, 31);
+    letter-spacing: 1vw;
+    text-shadow: 5px 7px 5px rgb(184, 5, 5);
+    position: relative;
+    transform:translateY(-100vh);
+    animation: fall 3s forwards;
+    
+}
+@keyframes fall{
+    100%{
+        transform:translateY(0);
+    }
+}
+/* Services Section */
+#services{
+    margin:-60px 1px;
+    display:flex;
+}
+#services .box{
+    border:2px solid red;
+    padding:34px;
+    margin:3px 25px;
+    border-radius: 28px;
+    background-color:bisque;
+    
+}
+#services .box img{
+    width:160px;
+    height:130px;
+    display:block;
+    margin:auto;
+}
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}
+
+/* Menu Section */
+#menu-section h1{
+    color:blueviolet;
+    text-align: center;
+    margin:30px 23px;
+}
+#menu-section .menu{
+    margin:0px 482px;
+}
+#menu-section{
+    border:2px solid red;
+    background-color: bisque;
+    margin:117px 50px;
+    padding:12px 23px;
+    border-radius: 28px;
+}
+#menulist img{
+    width:160px;
+    position:absolute;
+    right:255px;
+}
+/* Client Section */
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#client-section{
+    height:344px;
+    margin:150px 12px;
+
+    
+}
+#client-section::before{
+    content:"";
+    position:absolute;
+    background: url(../images/food-2569257_1280.jpg) no-repeat center center/cover;
+    width:100%;
+    height: 55%;
+    z-index: -1;
+    opacity:0.6;
+}
+#client-section img{
+    height:212px;
+}
+.client-item{
+    padding:20px;
+}
+#client-section h1{
+    font-family: 'Bree Serif', serif;
+    font-size:3.8rem;
+}
+
+/* contact section */
+#contact{
+    position:relative;
+}
+#contact::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    opacity:0.7;
+    background: url(../images/telephone-586268_1280.jpg) no-repeat center center/cover;
+}
+#contact-box{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box form{
+    width:40%;
+}
+#contact-box label{
+    font-size:1.3rem;
+    font-family: 'Bree Serif', serif;
+
+}
+#contact-box input,
+#contact-box textarea{
+    width:100%;
+    padding:0.5rem;
+    border-radius: 9px;
+    font-size:1.1rem;
+}
+footer{
+    background: black;
+    color:white;
+    padding:11px 50px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size:3.8rem;
+    padding:12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-size:2.1rem;
+    padding:12px;
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    padding:6px 20px;
+    border:2px solid white;
+    background:brown;
+    color:white;
+    margin:20px 440px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    display:flex;
+    flex-direction: column;   
+}
+.btn1{
+    padding:6px 20px;
+    border:2px solid white;
+    background:brown;
+    color:white;
+    margin:20px 475px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    display:flex;
+    flex-direction: column;  
+}
+
+
